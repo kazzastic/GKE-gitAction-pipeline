@@ -22,7 +22,7 @@ jobs:
 
     - name: Configure Docker to use Google Cloud authentication
       run: |
-        gcloud auth configure-docker
+        gcloud auth configure-docker europe-central2-docker.pkg.dev
 
     - name: Build and push Docker image
       run: |
