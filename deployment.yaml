@@ -15,6 +15,22 @@ spec:
       containers:
         - name: python-app
           image: europe-central2-docker.pkg.dev/quickstart-1561126963604/email-sender/python-app:latest
+          env:
+          - name: EMAIL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: secret-key
+                key: EMAIL_PASSWORD
+          - name: EMAIL_SENDER
+            valueFrom:
+              secretKeyRef:
+                name: secret-key
+                key: EMAIL_SENDER
+          - name: EMAIL_REC
+            valueFrom:
+              secretKeyRef:
+                name: secret-key
+                key: EMAIL_REC
           ports:
             - containerPort: 80
 ---
