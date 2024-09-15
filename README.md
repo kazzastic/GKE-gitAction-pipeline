@@ -1,5 +1,5 @@
 ### Google Managed Kubernetes Cluster 
-- a simple 3 node, 6 vCPU cluster fully managed by Google Cloud
+- a simple autoscaled, fully managed by Google Cloud
 - pipeline deploys to default `namespace`
 
 ### Google Artifcat Registry 
