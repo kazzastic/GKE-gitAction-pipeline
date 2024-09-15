@@ -35,7 +35,8 @@ jobs:
           --build-arg EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }} \
           --build-arg EMAIL_SENDER=${{ secrets.EMAIL_SENDER }} \
           --build-arg EMAIL_REC=${{ secrets.EMAIL_REC }} \
-          -t europe-central2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/email-sender/python-app:latest .
+          -t europe-central2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/email-sender/python-app:latest \
+          .
         docker push europe-central2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/email-sender/python-app:latest
 
     - name: Set up kubectl
